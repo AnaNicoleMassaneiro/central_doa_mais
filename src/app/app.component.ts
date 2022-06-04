@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
+import { Component } from '@angular/core';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
 
 
 @Component({
@@ -9,8 +9,12 @@ import {ErrorStateMatcher} from '@angular/material/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'central_doa_mais';
 
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  public title = 'Central DOA+';
+  public isAuthenticated = false;
 
+  public logout(): void {
+    // todo
+  }
 }

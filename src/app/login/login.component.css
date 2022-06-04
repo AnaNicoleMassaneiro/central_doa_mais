@@ -1,0 +1,49 @@
+.titulo {
+    position: absolute;
+    top: 50%;
+}
+
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+}
+
+mat-form-field {
+    display: block;
+}
+
+.sidebar {
+    top: 500px;
+}
+
+.newspaper {
+    column-count: 3;
+}
+
+.corpo {
+    margin-left: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    place-items: center;
+    align-content: center;
+}
+
+.img {
+    margin-right: 50px;
+}

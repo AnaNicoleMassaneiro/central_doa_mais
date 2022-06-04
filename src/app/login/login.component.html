@@ -1,0 +1,38 @@
+<div class="grid-container">
+    <div class="grid-item">
+        <h2>
+            Bem vindo a central do DOA+
+        </h2>
+        <form class="form-test" (ngSubmit)="onSubmit()">
+            <p>Login</p>
+            <mat-error *ngIf="!loginValid">
+                The username and password were not recognized se Registre por aqui!
+            </mat-error>
+            <mat-form-field>
+                <input matInput placeholder="Email" name="username" required>
+                <mat-error>
+                    Please provide a valid email address
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="password" placeholder="Password" name="password" required>
+                <mat-error>
+                    Please provide a valid password
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary">Login</button>
+        </form>
+
+        <p>
+            Se voce nao se cadastrou,
+            <a href="/register"> cadastre aqui!</a>
+
+        </p>
+    </div>
+
+    <div class="grid-item">
+
+        <img class="img" src="../../assets/Saly-14.png" alt="J" width="250" />
+
+    </div>
+</div>
