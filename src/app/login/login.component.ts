@@ -15,10 +15,18 @@ export class LoginComponent implements OnInit {
 
   private _destroySub$ = new Subject<void>();
   private readonly returnUrl: string;
-
+  form: any = {
+    username: null,
+    password: null
+  };
+  isLoggedIn = false;
+  isLoginFailed = false;
+  errorMessage = '';
+  roles: string[] = [];
   constructor(
     private _route: ActivatedRoute,
     private _router: Router,
+    
 
   ) {
     this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '/game';
@@ -32,8 +40,13 @@ export class LoginComponent implements OnInit {
     this._destroySub$.next();
   }
 
-  public onSubmit(): void {
+
+  onSubmit(): void {
     this.loginValid = true;
+  }
+
+  reloadPage(): void {
+    window.location.reload();
   }
   
 }

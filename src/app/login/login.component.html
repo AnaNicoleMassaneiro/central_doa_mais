@@ -6,18 +6,18 @@
         <form class="form-test" (ngSubmit)="onSubmit()">
             <p>Login</p>
             <mat-error *ngIf="!loginValid">
-                The username and password were not recognized se Registre por aqui!
+                Nome ou senha inválisdos
             </mat-error>
             <mat-form-field>
                 <input matInput placeholder="Email" name="username" required>
                 <mat-error>
-                    Please provide a valid email address
+                    Por favor,adicione um email
                 </mat-error>
             </mat-form-field>
             <mat-form-field>
                 <input matInput type="password" placeholder="Password" name="password" required>
                 <mat-error>
-                    Please provide a valid password
+                    Por favor,adicione uma senha válida
                 </mat-error>
             </mat-form-field>
             <button mat-raised-button color="primary">Login</button>
@@ -26,7 +26,6 @@
         <p>
             Se voce nao se cadastrou,
             <a href="/register"> cadastre aqui!</a>
-
         </p>
     </div>
 

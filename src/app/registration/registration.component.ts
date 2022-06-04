@@ -7,19 +7,11 @@ import { Subject } from 'rxjs';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-
- 
   public loginValid = true;
-  public username = '';
-  public password = '';
 
-  private _destroySub$ = new Subject<void>();
-
-  public ngOnInit(): void {
-
-  }
-
-  public ngOnDestroy(): void {
+  Roles: any = ['Admin', 'Author', 'Reader'];
+  constructor() { }
+  ngOnInit() {
   }
 
   public onSubmit(): void {

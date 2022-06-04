@@ -1,19 +1,58 @@
-<form class="form-test" (ngSubmit)="onSubmit()">
-    <p>Login</p>
-    <mat-error *ngIf="!loginValid">
-        The username and password were not recognized se Registre por aqui!
-    </mat-error>
-    <mat-form-field>
-        <input matInput placeholder="Email" name="username" required>
-        <mat-error>
-            Please provide a valid email address
-        </mat-error>
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput type="password" placeholder="Password" name="password" required>
-        <mat-error>
-            Please provide a valid password
-        </mat-error>
-    </mat-form-field>
-    <button mat-raised-button color="primary">Login</button>
-</form>
+<div class="register-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Cadastro de administrador</mat-card-title>
+        </mat-card-header>
+        <!--   <form class="example-form">
+            <mat-card-content>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Nome">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Email">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Senha">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Confirmação de Senha">
+                </mat-form-field>
+
+            </mat-card-content>
+            <button mat-stroked-button color="primary" class="btn-block">Cadastrar</button>
+        </form> -->
+
+        <form class="example-form" (ngSubmit)="onSubmit()">
+            <mat-error *ngIf="!loginValid">
+                Nome ou senha inválidos
+            </mat-error>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Nome" name="username" required>
+                <mat-error>
+                    Por favor,adicione um nome
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email" name="email" required>
+                <mat-error>
+                    Por favor,adicione um email
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="password" placeholder="Senha" name="password" required>
+                <mat-error>
+                    Por favor,adicione uma senha válida
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput type="password" placeholder="Confirmação de senha" name="password" required>
+                <mat-error>
+                    Por favor,adicione uma senha válida
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary">Login</button>
+        </form>
+    </mat-card>
+</div>
